@@ -1,32 +1,76 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+void torre(int casa)
+{
+    if (casa > 0)
+    {
+        printf("torre direita\n");
+        torre(casa - 1);
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    }
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+}
+void bispo(int casa)
+{
+   for (casa; casa>0 ;casa--){
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+        for( int i = 1; i>0; i--)
+        {
+       
+        printf("bispo direita \n");
+        }
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+        printf("bispo cima \n");
+        
+   }
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    
 
+
+}
+void rainha(int casa)
+{
+    if (casa > 0)
+    {
+        printf("rainha esquerda \n");
+       
+        rainha(casa - 1);
+
+
+    }
+
+
+}
+int main()
+{
+
+    
+    
+
+
+
+    //Move torre
+   torre(5);
+    //move bispo
+   bispo(10);
+   //mover rainha
+    rainha(5);
+    //mover cavalo
+    for(int cavalo = 1 ; cavalo > 0; cavalo-- )
+    {
+        int i = 2;
+        while(i > 0)
+        {
+            printf("cavalo moveu para cima\n");
+            i--;
+
+
+        }
+
+        printf("cavalo moveu para direita\n");
+
+    }
     return 0;
 }
